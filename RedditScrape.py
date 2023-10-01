@@ -18,13 +18,19 @@ def download_reddit_content(url, output_file):
         upvote_ratio = submission.upvote_ratio
         score = submission.score
 
+        comments = []
+        for comment in submission.comments.list():
+            comments.append(comment.body)
+        comments_text = "\n".join(comments)
+
         # Save the text content, title, and user to a text file
         with open(output_file, 'w', encoding='utf-8') as file:
             file.write(f"Title: {post_title}\n")
             file.write(f"User: {post_user}\n\n")
             file.write(f"Upvote Ratio: {upvote_ratio}\n")
             file.write(f"Score: {score}\n\n")
-            file.write(post_content)
+            file.write(f"Content: \n{post_content}\n\n")
+            file.write(f"Comments:\n{comments_text}")
 
 
         print(f"Content saved to '{output_file}'")
