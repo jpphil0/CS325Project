@@ -1,18 +1,15 @@
-import openai
+import os
+from bardapi import Bard
 import re
 
-# OpenAI API key
-openai.api_key = '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'
+# Bard API key
+os.environ['_BARD_API_KEY']="cQhVmYRyqpWI_cnOwmRLvIX33n3tnSjI7_ItSJpGjTydKWk4Tbe7Z74gcgeyrtizugoVHA."
 
 def generate_text(prompt):
     try:
-        response = openai.Completion.create(
-            engine="text-davinci-003",  # Use the ChatGPT 3.5 engine
-            prompt=f"What is the sentiment of this sentence?\nComment: {comment}\nSentiment:",
-            max_tokens=150  # Set the maximum length of the generated text
-        )
+        prompt=f"What is the sentiment of this sentence?\nComment: {comment}\nSentiment:",
 
-        generated_text = response.choices[0].text.strip()
+        generated_text = Bard().get_answer(str(prompt))['content']
         return generated_text
 
     except Exception as e:
