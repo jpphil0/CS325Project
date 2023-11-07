@@ -17,3 +17,9 @@ It will output the comments of the inputted file to a file named "comments.txt",
 -------------------------------------------------------------------------------------------------------------------------------------
 
 For Project 3, the File structure is under CS325_p3.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+For Project 4, to access the API key, go to a bard chat and hit f12. From there, copy and paste the value for F12 > Applications > Cookies > bard > __Secure-1PSID into
+the line os.environ['_BARD_API_KEY']="xxxxxx". If this key does not work, logout of bard, log in again, and then repaste the value.
