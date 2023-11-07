@@ -3,7 +3,7 @@ from bardapi import Bard
 import re
 
 # Bard API key
-os.environ['_BARD_API_KEY']="cQhVmYRyqpWI_cnOwmRLvIX33n3tnSjI7_ItSJpGjTydKWk4Tbe7Z74gcgeyrtizugoVHA."
+os.environ['_BARD_API_KEY']="xxxxxx"
 
 def generate_text(prompt):
     try:
