@@ -3,26 +3,31 @@ from bardapi import Bard
 import re
 
 # Bard API key
-os.environ['_BARD_API_KEY']="xxxxxx"
+os.environ['_BARD_API_KEY'] = "dAhVmQDvcsYIJm870j0OCJinOk8yduixr6Mt4L6Z9pn9YBl7wftdQcyPRTQZE2Y1S73MqA."
 
-def generate_text(prompt):
+def generate_text(comment):
     try:
-        prompt=f"What is the sentiment of this sentence?\nComment: {comment}\nSentiment:",
+        prompt = f"What is the sentiment of this sentence?\nComment: {comment}\nSentiment:"
 
-        generated_text = Bard().get_answer(str(prompt))['content']
+        generated_text = Bard().get_answer(prompt)['content']
         return generated_text
 
     except Exception as e:
         print(f"An error occurred while generating text: {e}")
         return None
 
-def classify_comment(comment):
+def classify_comment(comment, output_file):
     generated_response = generate_text(comment)
+
     # Test line to see if comments are being extracted properly
-    print(f"Comment: '{comment}'")
+    # print(f"Comment: '{comment}'")  #print sentiments in the temrinal
+
     if generated_response:
-        print(f"Generated Response: '{generated_response}'")
-        print("\n")
+        # print(f"Generated Response: '{generated_response}'")
+        # Write comment and sentiment to the output file
+        with open(output_file, 'a', encoding='utf-8') as file:
+            file.write(f"Comment: '{comment}'\nSentiment: '{generated_response}'\n\n")
+        print("Sentiment appended to the file.\n")
     else:
         print("Failed to generate response for the comment.\n")
 
@@ -40,13 +45,18 @@ def extract_comments(input_file):
         print(f"An error occurred: {e}")
         return []
 
-if __name__ == "__main__":
-    input_file = "comments.txt"
+def main():
+    input_file = os.path.join("Data", "Processed", "comments.txt")
+    output_file = os.path.join("Data", "Sentiments", "sentiments.txt")  # Name of the file to store sentiments
+
     comments = extract_comments(input_file)
 
     if not comments:
         print("No comments found in the input file.")
     else:
         for comment in comments:
-            classify_comment(comment)
+            classify_comment(comment, output_file)
 
+
+if __name__ == "__main__":
+    main()
