@@ -21,7 +21,7 @@ For Project 3, the File structure is under CS325_p3.
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-For Project 4, run the program by first running the following command:
+For Project 4, run the program by first running the following command from within the CS325_p3 folder:
 
 python run.py RedditLink outputFileName
 
