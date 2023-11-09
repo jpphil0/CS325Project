@@ -32,6 +32,5 @@ python APIrun.py
 API sentiments will be found in the folder Data->Sentiments->sentiments.txt
 
 In order for this program to work, you will need access to a BardAPI key.
-To access the API key, go to a bard chat and hit f12. From there, copy and paste the value for F12 > Applications > Cookies > bard > __Secure-1PSID into
-the line os.environ['_BARD_API_KEY']="xxxxxx" in replace of xxxxxx. If this key does not work, logout of bard, log in again, and then repaste the value.
+To access the API key, go to a bard chat and hit f12 or right click and select inspect. From there, copy and paste the value for F12 > Applications > Cookies > bard > __Secure-1PSID into the line os.environ['_BARD_API_KEY']="xxxxxx" in replace of xxxxxx. If this key does not work, logout of bard, log in again, and then repaste the value.
 If you encounter the error "Response status code is not 200. Response Status is 429", that means that you have used up your alloted API calls. To fix this, simply wait around 30 minutes, and functionality will return.
