@@ -3,7 +3,7 @@ from bardapi import Bard
 import re
 
 # Bard API key
-os.environ['_BARD_API_KEY'] = "dAhVmQDvcsYIJm870j0OCJinOk8yduixr6Mt4L6Z9pn9YBl7wftdQcyPRTQZE2Y1S73MqA."
+os.environ['_BARD_API_KEY'] = "xxxxxx"
 
 def generate_text(comment):
     try:
