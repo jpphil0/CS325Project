@@ -11,8 +11,12 @@ from Module2.RedditScrape2 import download_reddit_content
 from Module3.ExtractComments import extract_comments
 
 def sanitize_filename(filename):
-    # Replace problematic characters with underscores
-    return "".join(c if c.isalnum() or c in (' ', '_') else '_' for c in filename)
+    # Replace spaces with underscores and handle other problematic characters
+    invalid_chars = r'\/:*?"<>|'
+    sanitized_filename = "".join(c if c.isalnum() or c in ('_', '.', ' ') else '_' for c in filename)
+    sanitized_filename = "".join(c if c not in invalid_chars else '_' for c in sanitized_filename)
+    sanitized_filename = sanitized_filename.strip('_')  # Remove underscores from the ends
+    return sanitized_filename.replace(' ', '_')
 
 def process_urls_from_file(input_file):
     try:
@@ -44,5 +48,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
