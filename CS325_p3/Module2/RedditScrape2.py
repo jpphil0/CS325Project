@@ -13,7 +13,7 @@ def download_reddit_content(url, output_file):
                              client_secret='9JROcxfqSQMBY445SWAjm3ZYR7ZSQg',
                              user_agent='CS325Project1/1.0 by /u/omega-xxxvi')
 
-        # Fetch the Reddit post using the API
+  # Fetch the Reddit post using the API
         submission = reddit.submission(url=url)
 
         # Extract the title, user, and content
@@ -38,5 +38,10 @@ def download_reddit_content(url, output_file):
             file.write(f"Comments:\n{comments_text}")
 
         print(f"Content saved to '{output_file}'")
+
+        # Return the post title for further use
+        return post_title
+
     except Exception as e:
         print(f"An error occurred: {e}")
+        return None

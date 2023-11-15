@@ -8,9 +8,8 @@
 import sys
 from Module1.RedditScrape1 import main
 
-
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python run.py <URL> <output_file.txt>")
+    if len(sys.argv) != 2:
+        print("Usage: python run.py <input_urls_file.txt>")
     else:
         main()
