@@ -41,4 +41,4 @@ For project 5, the program run.py should be run in the following format:
 
 python run.py urlFileName.txt
 
-where urlFileName.txt is the file containing the list of reddit post urls. The program will output each url into a unique raw output file titled raw_i.txt, where i is the order of the url from the file. It will then be processed into a file titled [posttitle]_comments.txt
+where urlFileName.txt is the file containing the list of reddit post urls. The program will output each url into a unique raw output file titled raw_i.txt, where i is the order of the url from the file. It will then be processed into a file titled [posttitle]_comments.txt, where [posttitle] is the title of the reddit post using underscores to replace spacing.

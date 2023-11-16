@@ -1,8 +1,7 @@
 # This script (run.py) is the entry point of the program.
 # It checks the command-line arguments and calls the main function from Module1 to initiate the Reddit content download process.
-# Usage: python run.py <URL> <raw_output_file.txt>
-#   - <URL>: URL of the Reddit post to download.
-#   - <raw_output_file.txt>: The name of the file to save the raw Reddit post content in the Data/raw directory.
+# Usage: python run.py <URLList>
+#   - <URLList>: a txt file listing the URLs of the Reddit posts to download.
 # The program downloads the content from the specified Reddit post, processes it, and saves the extracted comments to the output file.
 
 import sys
