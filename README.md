@@ -37,8 +37,22 @@ If you encounter the error "Response status code is not 200. Response Status is 
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
+Note: for the best results make sure to clear out all .txt files from the Raw, Processed, and Sentiments folders in Data before running the program.
+
 For project 5, the program run.py should be run in the following format:
 
 python run.py urlFileName.txt
 
 where urlFileName.txt is the file containing the list of reddit post urls. The program will output each url into a unique raw output file titled raw_i.txt, where i is the order of the url from the file. It will then be processed into a file titled [posttitle]_comments.txt, where [posttitle] is the title of the reddit post using underscores to replace spacing.
+
+Once done, run the API call program with the following command:
+
+python APIrun.py
+
+To see instructions on how to get API key, see instruction for Project4.
+
+It should be noted that since this program uses a large amount of API calls on a free api key, running into the error "Response status code is not 200. Response Status is 429" can be quite common. To assure that this does not happen, please make sure that you get refresh your cookies (process listed in Project4 Instructions) before running this program. Furthermore, if using a free api key, the response:
+
+"Excluded response with 'Response Error' from being written."
+
+can sometimes be an occuring issue, and might be outputted to the command line. Whenever this response happens, the program will try to retrieve a sentiment from this comment a few more times. Usually, it will fix itself rather quickly.
