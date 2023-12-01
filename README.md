@@ -56,3 +56,13 @@ It should be noted that since this program uses a large amount of API calls on a
 "Excluded response with 'Response Error' from being written."
 
 can sometimes be an occuring issue, and might be outputted to the command line. Whenever this response happens, the program will try to retrieve a sentiment from this comment a few more times. Usually, it will fix itself rather quickly.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Note: for the best results make sure to clear out all files from the Plots folder in Data and only have the files you want turned into a plot in the Sentiments folder in Data.
+
+For project 6, the program GraphRun.py should be run in the following format:
+
+python GraphRun.py
+
+This assumes that run.py and APIrun.py have already been run correctly. After this program has run, the graphs will appear in the Data/Plots folder as separate .PNG files
