@@ -3,12 +3,28 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def read_sentiment_file(sentiment_file):
-    # Read sentiment file into a pandas dataframe
     with open(sentiment_file, 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
-    # Assuming sentiments are one per line in the file
-    df = pd.DataFrame({'Sentiment': lines})
+    sentiments = []
+    current_sentiment = None
+
+    for line in lines:
+        # Check for the presence of sentiment information
+        if 'Sentiment:' in line:
+            # Start capturing the sentiment from this line
+            current_sentiment = [line.split("Sentiment:")[1].strip()]
+        elif 'Comment:' in line and current_sentiment:
+            # If a new comment is listed, store the current sentiment
+            sentiments.extend(current_sentiment)
+            current_sentiment = None  # Reset current sentiment
+
+    # Add the last captured sentiment
+    if current_sentiment:
+        sentiments.extend(current_sentiment)
+
+    # Create a DataFrame from the list of sentiments
+    df = pd.DataFrame({'Sentiment': sentiments})
 
     return df
 
