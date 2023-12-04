@@ -1,46 +1,31 @@
 Comment: 'I can’t stomach them.'
-Sentiment: 'The sentiment of the sentence "I can't stomach them" is negative. The speaker is expressing disgust or aversion to something. The idiom "can't stomach" means to be unable to tolerate or endure something. In this case, the speaker is saying that they cannot stand to be around the people or things they are referring to.
-
-Here are some other words or phrases that have a similar meaning to "can't stomach": 
-* can't bear
-* can't stand
-* can't abide
-* can't stand the sight of
-* can't stomach the thought of'
+Sentiment: 'The sentiment of the sentence "I can’t stomach them" is **negative**. The phrase "I can't stomach them" is a way of saying that someone finds something or someone extremely unpleasant or repulsive. This is a negative sentiment.'
 
 Comment: 'Did you hear about the cannibal that passed his brother in the jungle?'
-Sentiment: 'The sentiment of the sentence "Did you hear about the cannibal that passed his brother in the jungle?" is humorous. It is a dark joke that plays on the unexpected juxtaposition of the cannibalistic act and the polite phrase "passed." The sentence is also ambiguous, as it can be interpreted in two ways:
-
-* The cannibal literally passed his brother in the jungle, perhaps while they were both walking in opposite directions.
-* The cannibal metaphorically "passed" his brother, meaning that he killed and ate him.
-
-The ambiguity of the sentence adds to its humor, as it leaves the listener to decide which interpretation they find funnier.'
+Sentiment: 'The sentiment of the sentence "Did you hear about the cannibal that passed his brother in the jungle?" is **neutral**. The sentence is a joke, and jokes can be difficult to classify according to sentiment. This particular joke is not intended to be offensive or upsetting, and it does not express any particular opinion or emotion. Therefore, it is best to classify it as neutral.'
 
 Comment: 'What did the cannibal get when he arrived late to the family dinner? The cold shoulder'
-Sentiment: 'The sentiment of the sentence "What did the cannibal get when he arrived late to the family dinner? The cold shoulder" is humorous. It is a dad joke that uses a play on words to create a pun. The phrase "cold shoulder" has two meanings:
-
-* Literally, it refers to the act of turning one's shoulder away from someone to show disapproval or dislike.
-* Metaphorically, it refers to the act of being distant or unfriendly.
-
-The joke is funny because it uses the literal meaning of the phrase "cold shoulder" to describe the cannibal's physical experience of arriving late to dinner and finding that the food is cold. However, the metaphorical meaning of the phrase is also implied, as the cannibal's family is clearly disapproving of his tardiness.
-
-The humor of the joke also comes from the fact that it is unexpected. The listener is set up to expect a serious answer to the question, but instead, they are given a pun. This unexpectedness can be seen as a form of linguistic trickery, which can be enjoyable for the listener.'
+Sentiment: 'The sentiment of the sentence "What did the cannibal get when he arrived late to the family dinner? The cold shoulder" is **negative**. The joke is based on the idea of cannibals eating people, which is a taboo and generally considered to be a negative topic. Additionally, the punchline of the joke is that the cannibal was given the cold shoulder, which is a way of saying that someone was treated unfriendly or coldly. This is also a negative sentiment. Overall, the joke is in poor taste and is likely to offend some people.
+
+Here is a more detailed explanation of the sentiment of the joke:
+
+* The word "cannibal" is typically associated with negative connotations, as it refers to someone who eats human flesh. This immediately sets a negative tone for the joke.
+* The punchline of the joke is that the cannibal was given the cold shoulder. This is a way of saying that someone was treated unpleasantly or coldly. This is also a negative sentiment.
+* The overall tone of the joke is dark and macabre. This is likely to offend some people, as it makes light of a serious topic.
+
+Therefore, the overall sentiment of the joke is negative.'
 
 Comment: '[deleted]'
-Sentiment: 'I cannot analyze the sentiment of the sentence "[deleted]" because there is no text to analyze. Please provide me with a sentence to analyze and I will be happy to do so.'
+Sentiment: 'I can't analyze the sentiment of the sentence "[deleted]" because there is no sentence to analyze. The word "[deleted]" indicates that the text has been removed, so there is no information to process.'
 
 Comment: 'That’s why cannibals don’t eat clowns. They taste funny'
-Sentiment: 'The sentiment of the sentence "That's why cannibals don't eat clowns. They taste funny" is humorous. It is a dark joke that plays on the cannibalistic act and the stereotype of clowns as being silly and unappealing. The sentence is also ambiguous, as it can be interpreted in two ways:
+Sentiment: 'The sentiment of the sentence "That’s why cannibals don’t eat clowns. They taste funny" is **neutral**. The sentence is a joke, and jokes can be difficult to classify according to sentiment. This particular joke is not intended to be offensive or upsetting, and it does not express any particular opinion or emotion. Therefore, it is best to classify it as neutral.
 
-* The cannibals literally do not eat clowns because they taste bad.
-* The cannibals metaphorically do not eat clowns, meaning that they do not find them to be appealing or worthwhile prey.
+Here is a more detailed explanation of the sentiment of the joke:
 
-The ambiguity of the sentence adds to its humor, as it leaves the listener to decide which interpretation they find funnier. Additionally, the phrase "taste funny" can be interpreted in two ways:
+* The word "cannibal" is typically associated with negative connotations, as it refers to someone who eats human flesh. However, in this context, the word is used in a lighthearted way.
+* The punchline of the joke is that cannibals don't eat clowns because they taste funny. This is a play on words, as the word "funny" can also mean "strange" or "unpleasant." The punchline is not intended to be offensive or upsetting, and it is not clear whether the cannibals find clowns to be strange or unpleasant in a positive or negative way.
+* The overall tone of the joke is playful and lighthearted. It is not likely to offend anyone, and it is not clear whether the joke is intended to be positive or negative.
 
-* Literally, it means that the clowns have a strange or unpleasant taste.
-* Metaphorically, it means that the clowns are not enjoyable or satisfying to consume.
-
-This double entendre also adds to the humor of the joke.
-
-Overall, the sentence "That's why cannibals don't eat clowns. They taste funny" is a dark and humorous joke that plays on multiple levels of meaning.'
+Therefore, the overall sentiment of the joke is neutral.'
 

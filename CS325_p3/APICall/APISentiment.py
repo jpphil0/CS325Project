@@ -5,7 +5,7 @@ import time
 
 MAX_RETRIES = 3
 # Bard API key
-os.environ['_BARD_API_KEY'] = "xxxxxx"
+os.environ['_BARD_API_KEY'] = "dwhVmYqytitDdNArzx1wVBL4DNWsL8T2ufa2u20FOzm1KSvG_8-hu083FbCz5NckmQ1JUw."
 
 # Initialize Bard outside the loop
 bard_instance = Bard()
@@ -14,7 +14,7 @@ def generate_text(comment):
     retries = 0
     while retries < MAX_RETRIES:
         try:
-            prompt = f"What is the sentiment of this sentence?\nComment: {comment}\nSentiment:"
+            prompt = f"What is the sentiment of this sentence (use the word Positive, Negative, or Neutral)?\nComment: {comment}\nSentiment:"
             generated_text = bard_instance.get_answer(prompt)['content']
             return generated_text
         except Exception as e:

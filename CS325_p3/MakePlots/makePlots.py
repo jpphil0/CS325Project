@@ -78,10 +78,10 @@ def main():
             for i in range(len(df)):
                 value_at_position_0_0 = df.iloc[i, 0]
 
-                if( "negative" in str(value_at_position_0_0)):
+                if( "**negative**" in str(value_at_position_0_0)):
                     negative=negative+1
 
-                elif( "positive" in str(value_at_position_0_0)):
+                elif( "**positive**" in str(value_at_position_0_0)):
                     positive=positive+1    
 
                 else:
