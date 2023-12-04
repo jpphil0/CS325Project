@@ -5,7 +5,7 @@ import time
 
 MAX_RETRIES = 3
 # Bard API key
-os.environ['_BARD_API_KEY'] = "dwhVmYqytitDdNArzx1wVBL4DNWsL8T2ufa2u20FOzm1KSvG_8-hu083FbCz5NckmQ1JUw."
+os.environ['_BARD_API_KEY'] = "xxxxxx"
 
 # Initialize Bard outside the loop
 bard_instance = Bard()
