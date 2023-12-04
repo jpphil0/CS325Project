@@ -10,41 +10,42 @@ def read_sentiment_file(sentiment_file):
     current_sentiment = None
 
     for line in lines:
-        # Check for the presence of sentiment information
         if 'Sentiment:' in line:
-            # Start capturing the sentiment from this line
-            current_sentiment = [line.split("Sentiment:")[1].strip()]
+            current_sentiment = line.split("Sentiment:")[1].strip()
         elif 'Comment:' in line and current_sentiment:
-            # If a new comment is listed, store the current sentiment
-            sentiments.extend(current_sentiment)
-            current_sentiment = None  # Reset current sentiment
+            sentiments.append(current_sentiment)
+            current_sentiment = None
 
-    # Add the last captured sentiment
     if current_sentiment:
-        sentiments.extend(current_sentiment)
+        sentiments.append(current_sentiment)
 
-    # Create a DataFrame from the list of sentiments
     df = pd.DataFrame({'Sentiment': sentiments})
-
     return df
 
-def plot_sentiments(df, output_plot_path, title):
-    # Extract sentiments and counts
-    sentiments = df['Sentiment'].str.strip()  # Remove leading/trailing whitespaces
-    counts = sentiments.value_counts()
 
-    # Plot the graph
-    plt.bar(counts.index, counts, color=['green', 'yellow', 'red'])  # Customize colors as needed
-    plt.title(title)
-    plt.xlabel('Sentiment')
-    plt.ylabel('Count')
 
-    # Add legend
-    plt.legend(['Positive', 'Neutral', 'Negative'])  # Customize labels as needed
+def plotGraph(pos, neg, neu, title, output_plot_path):
+    categories = ['Positive', 'Negative', 'Neutral']
+    values = [pos, neg, neu]
 
-    # Save the plot
+    # Create figure and axes
+    fig, ax = plt.subplots()
+
+    # Plotting the bar graph using ax.bar
+    ax.bar(categories, values, color=['green', 'red', 'yellow'], label=categories)
+
+    # Adding labels and title
+    ax.set_xlabel('Sentiments of Comments')
+    ax.set_ylabel('Sentiment Count')
+    ax.set_title(title)
+
+    # Add legend with predefined labels
+    ax.legend()
+
+    # Display the plot
     plt.savefig(output_plot_path)
     plt.close()
+
 
 def main():
     # Path to the folder containing sentiment files
@@ -58,24 +59,36 @@ def main():
 
     # Iterate through sentiment files
     for sentiment_file in os.listdir(sentiment_files_folder):
-        if sentiment_file.endswith("_comments.txt"):  # Assuming the sentiment files have a specific naming pattern
+        if sentiment_file.endswith(".txt"):
             sentiment_file_path = os.path.join(sentiment_files_folder, sentiment_file)
-
-            # Read sentiment file
             df = read_sentiment_file(sentiment_file_path)
 
-            # Extract title from the filename or URL (customize as needed)
+            # Extract title from the filename
             title_parts = os.path.splitext(sentiment_file)[0].replace("_comments", "").replace("_", " ").split()
             title = " ".join(title_parts[1:])
 
-            # Create a sanitized title for the plot filename
-            sanitized_title = title.replace(" ", "_").replace("'", "").lower()  # Customize as needed
-
-            # Path to store the output plot
+            sanitized_title = title.replace(" ", "_").replace("'", "").lower()
             output_plot_path = os.path.join(output_plots_folder, f"{sanitized_title}_plot.png")
 
-            # Plot sentiments and save the plot
-            plot_sentiments(df, output_plot_path, title)
+            negative=0
+            positive=0
+            neutral=0
+
+
+            for i in range(len(df)):
+                value_at_position_0_0 = df.iloc[i, 0]
+
+                if( "negative" in str(value_at_position_0_0)):
+                    negative=negative+1
+
+                elif( "positive" in str(value_at_position_0_0)):
+                    positive=positive+1    
+
+                else:
+                    neutral=neutral+1   
+                     
+            # print(positive," ",negative," ",neutral)
+            plotGraph(positive,negative,neutral,title,output_plot_path)
 
 if __name__ == "__main__":
     main()
